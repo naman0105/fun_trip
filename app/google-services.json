@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "876001348625",
+    "firebase_url": "https://funtrip-ecb6f.firebaseio.com",
+    "project_id": "funtrip-ecb6f",
+    "storage_bucket": "funtrip-ecb6f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:876001348625:android:e72dd572aafaef25",
+        "android_client_info": {
+          "package_name": "com.example.naman.trip_planner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "876001348625-ersb4eukffqm4arghmbe33naovr2qd08.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.naman.trip_planner",
+            "certificate_hash": "3eb3971f804d06a117e81e789411f635e3e432be"
+          }
+        },
+        {
+          "client_id": "876001348625-c0qf660tk6ob95e4ti67hvpbok0j53pp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAc-TWe4HxODABR_whrDyk_bf9CwAvShLc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "876001348625-c0qf660tk6ob95e4ti67hvpbok0j53pp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
