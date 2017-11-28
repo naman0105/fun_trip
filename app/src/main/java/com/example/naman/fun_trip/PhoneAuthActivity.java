@@ -1,5 +1,6 @@
 package com.example.naman.fun_trip;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
@@ -61,6 +62,9 @@ public class PhoneAuthActivity extends AppCompatActivity implements
     private Button mVerifyButton;
     private Button mResendButton;
     private Button mSignOutButton;
+
+
+    String phNumber;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -200,6 +204,7 @@ public class PhoneAuthActivity extends AppCompatActivity implements
 
 
     private void startPhoneNumberVerification(String phoneNumber) {
+        phNumber = phoneNumber;
         // [START start_phone_auth]
         PhoneAuthProvider.getInstance().verifyPhoneNumber(
                 phoneNumber,        // Phone number to verify
@@ -244,7 +249,13 @@ public class PhoneAuthActivity extends AppCompatActivity implements
 
                             FirebaseUser user = task.getResult().getUser();
                             // [START_EXCLUDE]
-                            updateUI(STATE_SIGNIN_SUCCESS, user);
+                            //updateUI(STATE_SIGNIN_SUCCESS, user);
+                            System.out.println("signed inn");
+                            Bundle bundle =new Bundle();
+                            bundle.putString("PhNumber",phNumber);
+                            Intent intent= new Intent(PhoneAuthActivity.this,UserRegistration.class);
+                            intent.putExtras(bundle);
+                            startActivity(intent);
                             // [END_EXCLUDE]
                         } else {
                             // Sign in failed, display a message and update the UI

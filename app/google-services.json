@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "876001348625-tf7jap7i24c4c8lrbs35r7d7gefccni7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.naman.trip_planner",
+            "certificate_hash": "3a4cc80196c57ac82c5c9d111586ae21e5d045e8"
+          }
+        },
+        {
           "client_id": "876001348625-ersb4eukffqm4arghmbe33naovr2qd08.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
