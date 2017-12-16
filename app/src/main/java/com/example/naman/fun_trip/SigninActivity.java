@@ -1,6 +1,7 @@
 package com.example.naman.fun_trip;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
@@ -59,6 +60,12 @@ public class SigninActivity extends AppCompatActivity {
                         String Password = (String)dataSnapshot.child("Password").getValue();
                         System.out.println(password + "   " + Password);
                         if(password.equals(Password)){
+
+                            SharedPreferences.Editor editor = getSharedPreferences("phoneandpass", MODE_PRIVATE).edit();
+                            editor.putString("phonenumber", phoneNumber);
+                            editor.putString("password", Password);
+                            editor.apply();
+
                             startActivity(new Intent(SigninActivity.this,HomeActivity.class));
                         }
                         else{

@@ -1,6 +1,8 @@
 package com.example.naman.fun_trip;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -10,6 +12,7 @@ import android.widget.TextView;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
 
 /**
  * Created by naman on 28-Nov-17.
@@ -65,6 +68,11 @@ public class UserRegistration extends AppCompatActivity {
                         databaseref.child("City").setValue(City);
                         databaseref.child("Password").setValue(Password);
                         message.setText("you have successfully registered");
+
+                        SharedPreferences.Editor editor = getSharedPreferences("phoneandpass", MODE_PRIVATE).edit();
+                        editor.putString("phonenumber", phNumber);
+                        editor.putString("password", Password);
+                        editor.apply();
 
                         Intent intent = new Intent(UserRegistration.this,HomeActivity.class);
                         startActivity(intent);
