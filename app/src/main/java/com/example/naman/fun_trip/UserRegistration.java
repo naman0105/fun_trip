@@ -35,7 +35,8 @@ public class UserRegistration extends AppCompatActivity {
         final String phNumber = bundle.getString("PhNumber");
         System.out.println("In user registration class "+ phNumber);
         mDatabase.child("users").setValue(phNumber);
-
+        GlobalVariables a = (GlobalVariables)getApplication();
+        a.setData(phNumber);
         submitButton = (Button) findViewById(R.id.submit_button);
 
         submitButton.setOnClickListener(new View.OnClickListener() {

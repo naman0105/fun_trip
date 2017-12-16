@@ -123,4 +123,15 @@ public class MainActivity extends AppCompatActivity
             }
         });
     }
+
+    public void onClickSignin(View view){
+        Button submit;
+        submit = findViewById(R.id.signinButton_id);
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, SigninActivity.class));
+            }
+        });
+    }
 }

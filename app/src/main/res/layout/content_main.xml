@@ -49,6 +49,7 @@
             android:id="@+id/signinButton_id"
             android:layout_width="229dp"
             android:layout_height="wrap_content"
+            android:onClick="onClickSignin"
             android:text="Sign in" />
     </LinearLayout>
 
