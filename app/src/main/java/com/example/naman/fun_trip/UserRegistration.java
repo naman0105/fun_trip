@@ -13,6 +13,9 @@ import android.widget.TextView;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.HashMap;
+import java.util.Map;
+
 
 /**
  * Created by naman on 28-Nov-17.
@@ -29,7 +32,7 @@ public class UserRegistration extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 // ...
-        mDatabase = FirebaseDatabase.getInstance().getReference();
+        mDatabase = FirebaseDatabase.getInstance().getReference("users");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_registration);
 
@@ -37,7 +40,7 @@ public class UserRegistration extends AppCompatActivity {
         bundle  = getIntent().getExtras();
         final String phNumber = bundle.getString("PhNumber");
         System.out.println("In user registration class "+ phNumber);
-        mDatabase.child("users").setValue(phNumber);
+//        mDatabase.child("users").setValue(phNumber);
         GlobalVariables a = (GlobalVariables)getApplication();
         a.setData(phNumber);
         submitButton = (Button) findViewById(R.id.submit_button);
@@ -45,7 +48,9 @@ public class UserRegistration extends AppCompatActivity {
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                databaseref = mDatabase.child("users").child(phNumber);
+//                databaseref = mDatabase.child("users").child(phNumber);
+//                String id = mDatabase.push().getKey();
+                databaseref = mDatabase.child(phNumber);
                 et_name = (EditText)findViewById(R.id.name);
                 et_city = (EditText)findViewById(R.id.city);
                 et_password = findViewById(R.id.password);
@@ -62,8 +67,18 @@ public class UserRegistration extends AppCompatActivity {
                 }
                 else {
                     if (Password.equals(ConfirmPassword) && Password.length() != 0) {
-//                System.out.println(et_name.getText().toString());
+
+//                        String key = mDatabase.child("posts").push().getKey();
+//                        Post post = new Post(userId, username, title, body);
+//                        Map<String, Object> postValues = post.toMap();
+//                        Map<String, Object> childUpdates = new HashMap<>();
+//                        childUpdates.put("/"+phNumber +"/", { Name : Name});
+//                        childUpdates.put("/user-posts/" + userId + "/" + key, postValues);
+//
+//                        mDatabase.updateChildren(childUpdates);
+
                         databaseref.child("Name").setValue(Name);
+//                        databaseref.child("Phonenumber").setValue(phNumber);
                         databaseref.child("Email").setValue(Email);
                         databaseref.child("City").setValue(City);
                         databaseref.child("Password").setValue(Password);

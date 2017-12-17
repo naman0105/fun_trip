@@ -1,0 +1,10 @@
+ myRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                    System.out.println( "Value is: " + snapshot);
+                    String name = snapshot.child("Name").getValue().toString();
+                    welcomeMessage.setText("welcome " + name + "! click 'Add Trip' to add a new trip");
+                }
+
+            }
