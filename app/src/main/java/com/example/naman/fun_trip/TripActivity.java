@@ -57,8 +57,8 @@ public class TripActivity extends AppCompatActivity {
                 moneyspent = dataSnapshot.child("moneyspent").getValue().toString();
                 moneybythis = dataSnapshot.child(phonenumber).getValue().toString();
                 Destination.setText(destination);
-                Budget.setText(moneyspent);
-                moneyspentbyme.setText(moneybythis);
+                Budget.setText("total money spent in the group:: " +moneyspent);
+                moneyspentbyme.setText("total money contributed by me::  " + moneybythis);
             }
 
             @Override
@@ -70,13 +70,34 @@ public class TripActivity extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                mDatabase.child(tripid).addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        String destination = dataSnapshot.child("Destination").getValue().toString();
+                        moneyspent = dataSnapshot.child("moneyspent").getValue().toString();
+                        moneybythis = dataSnapshot.child(phonenumber).getValue().toString();
+                        Destination.setText(destination);
+                        Budget.setText("total money spent in the group:: " +moneyspent);
+                        moneyspentbyme.setText("total money contributed by me::  " + moneybythis);
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+
+                    }
+                });
+
+
                 int entered = Integer.parseInt(enteredmoney.getText().toString());
                 int totalforthis = entered + Integer.parseInt(moneybythis);
-                int total = totalforthis + Integer.parseInt(moneyspent);
+                int total = entered + Integer.parseInt(moneyspent);
+                String text = String.valueOf(total);
+                String text1 = String.valueOf(totalforthis);
                 mDatabase.child(tripid).child(phonenumber).setValue(totalforthis);
                 mDatabase.child(tripid).child("moneyspent").setValue(total);
-                Budget.setText(total);
-                moneyspentbyme.setText(totalforthis);
+                Budget.setText("total money spent in the group:: " + text);
+                moneyspentbyme.setText("total money contributed by me::  " + text1);
             }
         });
 
