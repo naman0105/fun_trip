@@ -82,6 +82,7 @@ public class UserRegistration extends AppCompatActivity {
                         databaseref.child("Email").setValue(Email);
                         databaseref.child("City").setValue(City);
                         databaseref.child("Password").setValue(Password);
+                        databaseref.child("Trips").setValue(" ");
                         message.setText("you have successfully registered");
 
                         SharedPreferences.Editor editor = getSharedPreferences("phoneandpass", MODE_PRIVATE).edit();

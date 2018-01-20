@@ -30,6 +30,7 @@ public class HomeActivity extends AppCompatActivity {
     private Button addTrip;
     private Button logout,viewTrip;
     private String WelcomeMessage;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -82,7 +83,7 @@ public class HomeActivity extends AppCompatActivity {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
                         String trip_id = dataSnapshot.child("Trips").getValue().toString();
-                        if(trip_id.matches("")){
+                        if(trip_id.matches(" ")){
                             Toast.makeText(getApplicationContext(), "No trips has been created",
                                     Toast.LENGTH_LONG).show();
                         }

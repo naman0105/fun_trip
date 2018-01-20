@@ -1,35 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/p3">
 
     <TextView
         android:id="@+id/destination"
-        android:layout_width="106dp"
-        android:layout_height="65dp"
+        android:layout_width="141dp"
+        android:layout_height="33dp"
         android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
         android:text="Destination"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.539"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/moneyspent"
+        app:layout_constraintHorizontal_bias="0.403"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.088" />
+        app:layout_constraintVertical_bias="0.268" />
 
     <TextView
         android:id="@+id/moneyspent"
-        android:layout_width="92dp"
-        android:layout_height="55dp"
-        android:layout_marginBottom="296dp"
+        android:layout_width="325dp"
+        android:layout_height="58dp"
+        android:layout_marginBottom="404dp"
+        android:layout_marginTop="8dp"
         android:text="money spent"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.537"
+        app:layout_constraintHorizontal_bias="0.186"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/submit"
@@ -39,40 +46,61 @@
         android:layout_marginTop="416dp"
         android:text="submit money"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintHorizontal_bias="0.519"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.834" />
 
     <EditText
         android:id="@+id/entermoney"
-        android:layout_width="wrap_content"
-        android:layout_height="52dp"
+        android:layout_width="323dp"
+        android:layout_height="55dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:ems="10"
-        android:inputType="number"
         android:hint="enter money"
+        android:inputType="number"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.568"
+        app:layout_constraintHorizontal_bias="0.097"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.796" />
+        app:layout_constraintVertical_bias="0.846" />
+
+    <ListView
+        android:id="@+id/mylist"
+        android:layout_width="341dp"
+        android:layout_height="142dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginLeft="48dp"
+        android:drawSelectorOnTop="false"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.442"
+        tools:textColor="?android:attr/colorBackground" />
 
     <TextView
         android:id="@+id/moneyspentbyme"
-        android:layout_width="92dp"
-        android:layout_height="47dp"
+        android:layout_width="320dp"
+        android:layout_height="82dp"
         android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
         android:text="money spent by me"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/entermoney"
-        app:layout_constraintHorizontal_bias="0.537"
+        app:layout_constraintHorizontal_bias="0.175"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/moneyspent"
-        app:layout_constraintVertical_bias="0.771" />
+        app:layout_constraintVertical_bias="0.925" />
 </android.support.constraint.ConstraintLayout>
