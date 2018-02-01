@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/p3">
-
+>
     <TextView
         android:id="@+id/destination"
         android:layout_width="141dp"
@@ -13,7 +12,6 @@
         android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
         android:text="Destination"
-        android:textColor="#ffffff"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/moneyspent"
         app:layout_constraintHorizontal_bias="0.403"
@@ -29,7 +27,6 @@
         android:layout_marginBottom="404dp"
         android:layout_marginTop="8dp"
         android:text="money spent"
-        android:textColor="#ffffff"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.186"
@@ -63,7 +60,6 @@
         android:ems="10"
         android:hint="enter money"
         android:inputType="number"
-        android:textColor="#ffffff"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -79,7 +75,6 @@
         android:layout_marginEnd="36dp"
         android:layout_marginLeft="48dp"
         android:drawSelectorOnTop="false"
-        android:textColor="#ffffff"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -95,7 +90,6 @@
         android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
         android:text="money spent by me"
-        android:textColor="#ffffff"
         android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/entermoney"
         app:layout_constraintHorizontal_bias="0.175"

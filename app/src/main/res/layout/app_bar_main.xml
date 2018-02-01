@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.naman.fun_trip.MainActivity"
-    android:background="@drawable/p3">
+   >
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
