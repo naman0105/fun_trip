@@ -6,7 +6,14 @@ The money spend will will equaly split and the amount of money person needs to g
 
 This App is using Firebase Real Time Database to store the information related to trip and the money given by team mates.
 
+The flow of the App is given below::
+
+![firstpage](/new%20report%20and%20screenshots/wordtoimage.PNG)
+
+![secondpage](/new%20report%20and%20screenshots/wordtoimage2.PNG)
+
+
+
 The structure of firebase is given below
 
-
-![ExcelStructure](/new report and screenshots/Screenshot_20180120-220213.png)
+![firebase](/new%20report%20and%20screenshots/firebase.PNG)
